@@ -1,1 +1,95 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  font-family: sans-serif;
+}
+// Profile Text CSS Start
+.profileText{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50%;
+    border: 1px solid;
+    &.color1{
+        background-color: #e9f2ff;
+        color: #388bff;
+        border-color: #84b8ff;
+    }
+    &.color2{
+        background-color: #e3fafc;
+        color: #37b4c3;
+        border-color: #8bdbe5;
+    }
+    &.color3{
+        background-color: #dffcf0;
+        color: #2abb7f;
+        border-color: #7ee2b8;
+    }
+    &.color4{
+        background-color: #eefbda;
+        color: #82b536;
+        border-color: #b3df72;
+    }
+    &.color5{
+        background-color: #fff7d6;
+        color: #cf9f02;
+        border-color: #f5cd47;
+    }
+    &.color6{
+        background-color: #fff4e5;
+        color: #f18d13;
+        border-color: #fec57b;
+    }
+    &.color7{
+        background-color: #ffedeb;
+        color: #ef5c48;
+        border-color: #ff9c8f;
+    }
+    &.color8{
+        background-color: #ffecf8;
+        color: #da62ac;
+        border-color: #f797d2;
+    }
+    &.color9{
+        background-color: #f3f0ff;
+        color: #8f7ee7;
+        border-color: #b8acf6;
+    }
+}
+// Profile Text CSS End
+
+// Popover CSS Start
+[popover]{
+    anchor-default: var(--anchor);
+    position-fallback: --top-to-bottom;
+    inset: unset;
+    margin: 0px;
+}
+@position-fallback --top-to-bottom{
+    @try{
+        bottom: anchor(auto);
+        right: anchor(auto);
+    }
+    @try{
+        top: anchor(auto);
+        left: anchor(auto);
+    }
+}
+.popoverButton{
+    anchor-name: var(--anchor-name);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.popoverSection{
+    border: none;
+}
+// Popover CSS End

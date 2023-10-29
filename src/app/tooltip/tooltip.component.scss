@@ -1,0 +1,64 @@
+.profileTooltip{
+    position: relative;
+    width: 260px;
+    border-radius: 6px;
+    border: 1px solid #b2b2b2;
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 24%);
+    .header{
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 10px;
+        .profileText{
+            width: 52px;
+            height: 52px;
+            font-size: 17px;
+        }
+        .userDetail{
+            position: relative;
+            h4{
+                margin: 0px 0px 2px;
+                font-size: 16px;
+            }
+            p{
+                color: #222;
+                font-size: 14px;
+            }
+        }
+    }
+    .content{
+        position: relative;
+        padding: 10px;
+        ul{
+            position: relative;
+            li{
+                position: relative;
+                list-style-type: none;
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                padding: 0px 0px 14px;
+                &:last-child{
+                    padding: 0px;
+                }
+                img{
+                    width: 20px;
+                    height: auto;
+                }
+                p{
+                    color: #222;
+                    font-size: 14px;
+                    line-height: 1.3;
+                }
+            }
+        }
+    }
+}

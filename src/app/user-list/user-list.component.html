@@ -1,0 +1,34 @@
+<section class="userList" *ngIf="userList && userList.length > 0">
+    <h2>User List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Profile</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Address</th>
+                <th>Website</th>
+                <th>Company</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of userList; let i = index">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>
+                    <button class="popoverButton" [attr.popovertarget]="'profilePopOver'+i" popovertargetaction style="--anchor-name: --profileAnchor{{i}}"><span class="profileText" appUserColor>{{item.name}}</span></button>
+                    <div class="popoverSection" id="profilePopOver{{i}}" popover="auto" style="--anchor: --profileAnchor{{i}}">
+                        <app-tooltip [userID]="item.id" />
+                    </div>
+                </td>
+                <td>{{item.email}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.address.suite}}, {{item.address.street}}, {{item.address.city}}, {{item.address.zipcode}}</td>
+                <td>{{item.website}}</td>
+                <td>{{item.company.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

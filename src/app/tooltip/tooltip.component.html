@@ -1,0 +1,29 @@
+<div class="profileTooltip" *ngIf="userDetail">
+    <div class="header">
+        <span class="profileText" appUserColor>{{userDetail.name}}</span>
+        <div class="userDetail">
+            <h4>{{userDetail.name}}</h4>
+            <p>{{userDetail.email}}</p>
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <li>
+                <img src="../../assets/location.png" />
+                <p>{{userDetail.address.suite}}, {{userDetail.address.street}}, {{userDetail.address.city}}, {{userDetail.address.zipcode}}</p>
+            </li>
+            <li>
+                <img src="../../assets/location.png" />
+                <p>{{userDetail.address.suite}}, {{userDetail.address.street}}, {{userDetail.address.city}}, {{userDetail.address.zipcode}}</p>
+            </li>
+            <li>
+                <img src="../../assets/location.png" />
+                <p>{{userDetail.address.suite}}, {{userDetail.address.street}}, {{userDetail.address.city}}, {{userDetail.address.zipcode}}</p>
+            </li>
+            <li>
+                <img src="../../assets/location.png" />
+                <p>{{userDetail.address.suite}}, {{userDetail.address.street}}, {{userDetail.address.city}}, {{userDetail.address.zipcode}}</p>
+            </li>
+        </ul>
+    </div>
+</div>

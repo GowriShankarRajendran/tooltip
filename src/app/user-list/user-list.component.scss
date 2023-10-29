@@ -1,0 +1,34 @@
+.userList{
+    position: relative;
+    padding: 40px;
+    margin: 0px;
+    h2{
+        margin: 0px 0px 10px;
+    }
+    table{
+        position: relative;
+        border-collapse: collapse;
+        thead{
+            position: relative;
+            tr{
+                position: relative;
+                th{
+                    text-align: left;
+                    border: 1px solid #333;
+                    padding: 10px;
+                }
+            }
+        }
+        tbody{
+            position: relative;
+            tr{
+                position: relative;
+                td{
+                    text-align: left;
+                    border: 1px solid #333;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
