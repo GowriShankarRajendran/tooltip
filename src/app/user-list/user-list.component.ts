@@ -1,24 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileTextComponent } from '../profile-text/profile-text.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { TooltipService } from '../service/tooltip.service';
-import { UserColorDirective } from '../directives/user-color.directive';
 import { IuserList } from '../service/tooltip.interface';
 
 @Component({
   selector: 'app-user-list',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, TooltipComponent, UserColorDirective],
+  imports: [CommonModule, HttpClientModule, ProfileTextComponent, TooltipComponent],
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.scss']
 })
 export class UserListComponent implements OnInit{
   userList: IuserList[] = [];
+  userName: string = 'Gowri';
   constructor(private tooltipService: TooltipService){}
 
   ngOnInit(): void {
     this.getUserList();
+    setTimeout(()=>{this.userName = 'Shankar'},6000);
   }
 
   getUserList(){

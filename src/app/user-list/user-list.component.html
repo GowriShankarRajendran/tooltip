@@ -18,7 +18,7 @@
                 <td>{{item.id}}</td>
                 <td>{{item.name}}</td>
                 <td>
-                    <button class="popoverButton" [attr.popovertarget]="'profilePopOver'+i" popovertargetaction style="--anchor-name: --profileAnchor{{i}}"><span class="profileText" appUserColor>{{item.name}}</span></button>
+                    <button class="popoverButton" [attr.popovertarget]="'profilePopOver'+i" popovertargetaction style="--anchor-name: --profileAnchor{{i}}"><app-profile-text [userName]="item.name" /></button>
                     <div class="popoverSection" id="profilePopOver{{i}}" popover="auto" style="--anchor: --profileAnchor{{i}}">
                         <app-tooltip [userID]="item.id" />
                     </div>
