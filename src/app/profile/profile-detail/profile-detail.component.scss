@@ -1,0 +1,25 @@
+[popover]{
+    anchor-default: var(--anchor);
+    position-fallback: --top-to-bottom;
+    inset: unset;
+    margin: 0px;
+}
+@position-fallback --top-to-bottom{
+    @try{
+        bottom: anchor(auto);
+        right: anchor(auto);
+    }
+    @try{
+        top: anchor(auto);
+        left: anchor(auto);
+    }
+}
+.popoverButton{
+    anchor-name: var(--anchor-name);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.popoverSection{
+    border: none;
+}

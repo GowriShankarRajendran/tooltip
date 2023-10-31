@@ -1,5 +1,6 @@
 import { Component, OnChanges, Input, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { IuserList } from '../../service/tooltip.interface';
 
 @Component({
   selector: 'app-profile-text',
@@ -11,6 +12,7 @@ import { CommonModule } from '@angular/common';
 export class ProfileTextComponent implements OnChanges{
   @Input() userID: string = null;
   @Input() userName: string = null;
+  @Input() userDetail: IuserList = null;
   profileColor: string = null;
 
   ngOnChanges(changes: SimpleChanges): void {

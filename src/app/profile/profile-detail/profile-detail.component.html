@@ -1,0 +1,6 @@
+<button class="popoverButton" [attr.popovertarget]="'profilePopOver'+uniqueID" popovertargetaction style="--anchor-name: --profileAnchor{{uniqueID}}">
+    <app-profile-text [userName]="userName" [userDetail]="profileInfo ? userDetail : null" />
+</button>
+<div class="popoverSection" id="profilePopOver{{uniqueID}}" popover="auto" style="--anchor: --profileAnchor{{uniqueID}}">
+    <app-tooltip [userDetail]="userDetail" />
+</div>
