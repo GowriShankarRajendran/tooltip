@@ -1,6 +1,6 @@
 <div class="profileTooltip" *ngIf="userDetail">
     <div class="header">
-        <app-profile-text [userName]="userDetail.name" />
+        <app-profile-text [userName]="userDetail.name" [onlineStatus]="onlineStatus" />
         <div class="userDetail">
             <h4>{{userDetail.name}}</h4>
             <p>{{userDetail.email}}</p>

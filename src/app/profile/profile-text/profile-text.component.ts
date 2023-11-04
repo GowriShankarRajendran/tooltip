@@ -10,9 +10,9 @@ import { IuserList } from '../../service/tooltip.interface';
   styleUrls: ['./profile-text.component.scss']
 })
 export class ProfileTextComponent implements OnChanges{
-  @Input() userID: string = null;
   @Input() userName: string = null;
   @Input() userDetail: IuserList = null;
+  @Input() onlineStatus: boolean = false;
   profileColor: string = null;
 
   ngOnChanges(changes: SimpleChanges): void {

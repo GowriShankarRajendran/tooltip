@@ -1,3 +1,12 @@
+<select *ngIf="userList && userList.length > 0" (change)="getSelectedUser($event)">
+    <option value="">Select user</option>
+    <option *ngFor="let item of userList" [value]="item.id">{{item.name}}</option>
+</select>
+
+<ul *ngIf="selectedUser === 1">
+    <li *ngFor="let user of onlineUser">{{user.name}}</li>
+</ul>
+
 <section class="userList" *ngIf="userList && userList.length > 0">
     <h2>User List</h2>
     <table>

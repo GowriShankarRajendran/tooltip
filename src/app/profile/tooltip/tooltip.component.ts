@@ -12,6 +12,7 @@ import { IuserList } from '../../service/tooltip.interface';
 })
 export class TooltipComponent implements OnInit{
   @Input() userDetail: IuserList = null;
+  @Input() onlineStatus: boolean = false;
   constructor(){}
 
   ngOnInit(): void {

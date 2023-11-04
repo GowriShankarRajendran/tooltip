@@ -1,5 +1,8 @@
 <div class="profileIcon">
-    <span [class]="'profileText ' + profileColor">{{userName}}</span>
+    <p [class]="'profileText ' + profileColor">
+        {{userName}}
+        <span [class]="onlineStatus ? 'status online' : 'status'"></span>
+    </p>
     <div class="detail" *ngIf="userDetail">
         <h4>{{userDetail.name}}</h4>
         <p>{{userDetail.address.city}}</p>

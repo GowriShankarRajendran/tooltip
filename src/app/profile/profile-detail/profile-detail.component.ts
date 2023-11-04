@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProfileTextComponent } from '../profile-text/profile-text.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { TooltipService } from '../../service/tooltip.service';
+import { OnlineUserService } from '../../service/online-user/online-user.service';
 import { IuserList } from '../../service/tooltip.interface';
 
 @Component({
@@ -18,10 +19,13 @@ export class ProfileDetailComponent implements OnInit, OnChanges{
   @Input() userName: string = null;
   @Input() profileInfo: boolean = false;
   userDetail: IuserList = null;
-  constructor(private tooltipService: TooltipService){}
+  onlineStatus: boolean = false;
+  constructor(private tooltipService: TooltipService, private onlineUserService: OnlineUserService){}
 
   ngOnInit(): void {
-    
+    this.onlineUserService.currentMessage.subscribe(data => {
+      this.onlineStatus = this.userID && data && data.length > 0 ? data.some((val: any) => val.userID == this.userID) : false;
+    });
   }
 
   ngOnChanges(changes: SimpleChanges): void {
